@@ -5,8 +5,18 @@
 
 
 def accum(_str):
-    pass
+    index = 1
+    result = ''
+    for sym in _str:
+        result += (sym * index).title() + '-'
+        index += 1
+    return result[:-1]
 
+
+def accum_new(_str):
+    return '-'.join(
+        [(sym * (index + 1)).title() for index, sym in enumerate(_str)]
+    )
 
 assert accum("abcd") == "A-Bb-Ccc-Dddd"
 assert accum("RqaEzty") == "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
@@ -34,10 +44,13 @@ exercise you don't need to check if the greeting is a subset of word
 ('Hallowen' can pass the test)
 PS. regex should be case insensitive to pass the tests
 """
+import re
 
 
 def validate_hello(_str):
-    pass
+    WORDS = {'hello', 'ciao', 'salut', 'hallo', 'hola', 'ahoj', 'czesc'}
+    result = set(re.split(r'\W', _str.lower()))
+    return bool(result.intersection(WORDS))
 
 
 assert validate_hello('hello') is True
@@ -78,10 +91,18 @@ there are 10 matches in the championship
 
 
 def points(games):
-    pass
+    result = 0
+    for game in games:
+        score = game.split(':')
+        team_1 = int(score[0])
+        team_2 = int(score[1])
+        if team_1 > team_2:
+            result += 3
+        elif team_1 == team_2:
+            result += 1
+    return result
 
 
-print("Basic Tests")
 assert points(['1:0', '2:0', '3:0', '4:0', '2:1', '3:1', '4:1', '3:2', '4:2', '4:3']) == 30  # noqa
 assert points(['1:1', '2:2', '3:3', '4:4', '2:2', '3:3', '4:4', '3:3', '4:4', '4:4']) == 10  # noqa
 assert points(['0:1', '0:2', '0:3', '0:4', '1:2', '1:3', '1:4', '2:3', '2:4', '3:4']) == 0  # noqa

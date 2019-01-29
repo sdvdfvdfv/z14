@@ -36,3 +36,11 @@
 - https://www.w3schools.com/python/python_functions.asp
 
 ### Homework (homework2)
+
+# Lesson 3 29/01/2019
+### Documentation 
+- https://www.w3schools.com/python/python_lambda.asp - лямбда функции
+- https://docs.python.org/3.3/library/functions.html - встроенные функции
+- https://www.tutorialspoint.com/python/python_modules.htm - модули
+
+### Homework (homework3)

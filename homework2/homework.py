@@ -3,7 +3,11 @@
 # 1. Создать функцию которая создает список
 # натуральных чисел от минимума до максимума с шагом
 def custom_range(_min, _max, _step=1):
-    pass
+    result = []
+    while _min < _max:
+        result.append(_min)
+        _min += _step
+    return result
 
 
 assert custom_range(1, 4) == [1, 2, 3]
@@ -14,7 +18,15 @@ print('1 - OK')
 
 # 2. Написать функцию, которая вычисляет факториал заданого числа
 def factorial(n):
-    pass
+    result = 1
+    while n:
+        result *= n
+        n -= 1
+    return result
+
+
+# def factorial(n):
+#     return n * factorial(n - 1) if n > 1 else 1
 
 
 assert factorial(1) == 1
@@ -27,10 +39,22 @@ print('2 - OK')
 # сколько чисел списка больше по модулю максимального для нахождения модуля
 # использовать функцию abs
 def count_of_max_numbers(_list):
-    pass
+    count = 0
+    if not _list:
+        return count
+    _max = _list[0]
+    for item in _list:
+        if item > _max:
+            _max = item
+
+    for item in _list:
+        if abs(item) > _max:
+            count += 1
+    return count
 
 
 assert count_of_max_numbers([]) == 0
 assert count_of_max_numbers([1]) == 0
 assert count_of_max_numbers([5, 7, -10, -8]) == 2
 print('3 - OK')
+
