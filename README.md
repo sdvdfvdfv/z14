@@ -1,7 +1,7 @@
 # Lesson 1 22/01/2019
  Для тех кто будет заново все делать в linux
 
-1. Скачать питон https://www.python.org/downloads/
+1. Скачать питон https://www.python.org/downloads/    hhgjhkghj
 2. Установить pip. https://pip.pypa.io/en/stable/installing/
 3. Установить virtualenv - `pip install virtualenv` https://virtualenv.pypa.io/en/stable/installation/
 4. Создать переменную окружения. **ЗАПОМНИТЕ РАСПОЛОЖЕНИЕ ПЕРЕМЕННОЙ** `virtualenv env1`
