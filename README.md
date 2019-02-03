@@ -1,6 +1,6 @@
 # Lesson 1 22/01/2019
  Для тех кто будет заново все делать в linux
-
+xzczxc
 1. Скачать питон https://www.python.org/downloads/    hhgjhkghj
 2. Установить pip. https://pip.pypa.io/en/stable/installing/
 3. Установить virtualenv - `pip install virtualenv` https://virtualenv.pypa.io/en/stable/installation/
